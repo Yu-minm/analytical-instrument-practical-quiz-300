@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="分析装置の原理、条件設定、データ解釈、不良解析を学ぶ実務クイズ300問">
+  <meta name="description" content="分析装置と不良解析の実務知識を確認する問題集300問">
   <meta name="theme-color" content="#12243a">
-  <title>分析装置・不良解析 実務クイズ300</title>
+  <title>分析装置・不良解析 実務問題集300</title>
   <link rel="stylesheet" href="style.css?v=2.0.0">
 </head>
 <body>
@@ -13,16 +13,16 @@
 
   <header class="site-header">
     <div class="header-inner">
-      <button id="brand-button" class="brand" type="button" aria-label="学習設定へ戻る">
+      <button id="brand-button" class="brand" type="button" aria-label="出題設定へ戻る">
         <span class="brand-mark" aria-hidden="true">🔬</span>
         <span>
           <strong>分析装置・不良解析</strong>
-          <small>実務クイズ300</small>
+          <small>実務問題集300</small>
         </span>
       </button>
 
       <nav class="main-nav" aria-label="主要メニュー">
-        <button class="nav-button is-active" data-view="setup" type="button">学習設定</button>
+        <button class="nav-button is-active" data-view="setup" type="button">出題設定</button>
         <button class="nav-button" data-view="bank" type="button">問題検索</button>
         <button class="nav-button" data-view="history" type="button">学習履歴</button>
       </nav>
@@ -38,39 +38,32 @@
     </div>
   </header>
 
-  <section id="view-setup" class="view is-active" aria-labelledby="setup-title">
-  <div class="hero-panel">
-    <div>
-      <p class="eyebrow">INTERMEDIATE / ADVANCED</p>
-      <h1 id="setup-title">問題演習</h1>
-    </div>
+  <main id="main-content" class="app-shell">
+    <noscript>
+      <div class="notice notice-error">このアプリを使用するにはJavaScriptが必要です。ブラウザの設定でJavaScriptを有効にしてください。</div>
+    </noscript>
 
-    <div class="hero-stats" aria-label="問題構成">
-      <div><strong id="stat-total">300</strong><span>問題</span></div>
-      <div><strong id="stat-case">161</strong><span>ケース関連</span></div>
-      <div><strong id="stat-compare">90</strong><span>比較関連</span></div>
-      <div><strong>0</strong><span>初級問題</span></div>
-    </div>
-  </div>
-</section>
-
-    <div class="hero-stats" aria-label="問題構成">
-      <div><strong id="stat-total">300</strong><span>全問題</span></div>
-      <div><strong id="stat-case">161</strong><span>ケース問題</span></div>
-      <div><strong id="stat-compare">90</strong><span>比較問題</span></div>
-      <div><strong>0</strong><span>初級問題</span></div>
-    </div>
-  </div>
-</section>
+    <section id="view-setup" class="view is-active" aria-labelledby="setup-title">
+      <div class="hero-panel">
+        <div>
+          <h1 id="setup-title">プラスチック・フィルム製造 問題演習</h1>
+        </div>
+        <div class="hero-stats" aria-label="問題構成">
+          <div><strong id="stat-total">300</strong><span>全問題</span></div>
+          <div><strong id="stat-case">161</strong><span>ケース関連</span></div>
+          <div><strong id="stat-compare">90</strong><span>比較関連</span></div>
+          <div><strong>0</strong><span>初級問題</span></div>
+        </div>
+      </div>
 
       <div id="resume-panel" class="resume-panel hidden" role="status">
         <div>
-          <strong>途中のセッションがあります</strong>
+          <strong>中断した学習があります</strong>
           <span id="resume-description"></span>
         </div>
         <div class="button-row compact">
-          <button id="resume-button" class="button primary" type="button">続きから再開</button>
-          <button id="discard-session-button" class="button ghost" type="button">破棄</button>
+          <button id="resume-button" class="button primary" type="button">再開</button>
+          <button id="discard-session-button" class="button ghost" type="button">削除</button>
         </div>
       </div>
 
@@ -78,7 +71,7 @@
         <section class="panel" aria-labelledby="range-heading">
           <div class="panel-heading">
             <div>
-              <p class="step-label">STEP 1</p>
+              <p class="step-label">設定 1</p>
               <h2 id="range-heading">出題範囲</h2>
             </div>
             <div class="button-row compact">
@@ -91,39 +84,39 @@
 
         <aside class="setup-sidebar">
           <section class="panel" aria-labelledby="difficulty-heading">
-            <p class="step-label">STEP 2</p>
-            <h2 id="difficulty-heading">難易度・形式</h2>
+            <p class="step-label">設定 2</p>
+            <h2 id="difficulty-heading">難易度と形式</h2>
             <fieldset class="choice-fieldset">
               <legend>難易度</legend>
               <label class="check-pill"><input type="checkbox" name="difficulty" value="中級" checked><span>中級</span></label>
               <label class="check-pill"><input type="checkbox" name="difficulty" value="上級" checked><span>上級</span></label>
             </fieldset>
             <fieldset class="choice-fieldset">
-              <legend>主形式</legend>
+              <legend>問題形式</legend>
               <label class="check-pill"><input type="checkbox" name="primary-type" value="単一選択" checked><span>単一選択</span></label>
               <label class="check-pill"><input type="checkbox" name="primary-type" value="ケーススタディ" checked><span>ケース</span></label>
               <label class="check-pill"><input type="checkbox" name="primary-type" value="装置比較" checked><span>装置比較</span></label>
             </fieldset>
             <fieldset class="choice-fieldset stacked">
-              <legend>関連内容</legend>
-              <label class="switch-row"><input id="case-related-toggle" type="checkbox"><span>ケース関連だけ</span></label>
-              <label class="switch-row"><input id="comparison-related-toggle" type="checkbox"><span>装置比較関連だけ</span></label>
+              <legend>絞り込み</legend>
+              <label class="switch-row"><input id="case-related-toggle" type="checkbox"><span>ケース関連のみ</span></label>
+              <label class="switch-row"><input id="comparison-related-toggle" type="checkbox"><span>装置比較関連のみ</span></label>
             </fieldset>
           </section>
 
           <section class="panel" aria-labelledby="mode-heading">
-            <p class="step-label">STEP 3</p>
-            <h2 id="mode-heading">出題モード</h2>
+            <p class="step-label">設定 3</p>
+            <h2 id="mode-heading">出題方法</h2>
             <div class="radio-card-list">
-              <label class="radio-card"><input type="radio" name="study-mode" value="random" checked><span><strong>ランダム</strong><small>選択範囲から無作為出題</small></span></label>
-              <label class="radio-card"><input type="radio" name="study-mode" value="weak"><span><strong>苦手優先</strong><small>誤答率と回答回数から優先</small></span></label>
-              <label class="radio-card"><input type="radio" name="study-mode" value="unanswered"><span><strong>未回答優先</strong><small>未学習問題から先に出題</small></span></label>
-              <label class="radio-card"><input type="radio" name="study-mode" value="bookmarked"><span><strong>しおり</strong><small>保存した問題だけを復習</small></span></label>
+              <label class="radio-card"><input type="radio" name="study-mode" value="random" checked><span><strong>ランダム</strong><small>選択した範囲から出題</small></span></label>
+              <label class="radio-card"><input type="radio" name="study-mode" value="weak"><span><strong>苦手優先</strong><small>回答履歴をもとに優先</small></span></label>
+              <label class="radio-card"><input type="radio" name="study-mode" value="unanswered"><span><strong>未回答優先</strong><small>未回答の問題を優先</small></span></label>
+              <label class="radio-card"><input type="radio" name="study-mode" value="bookmarked"><span><strong>しおり</strong><small>しおりを付けた問題だけを出題</small></span></label>
             </div>
           </section>
 
           <section class="panel" aria-labelledby="count-heading">
-            <p class="step-label">STEP 4</p>
+            <p class="step-label">設定 4</p>
             <h2 id="count-heading">問題数</h2>
             <div id="count-buttons" class="segmented" role="group" aria-label="出題問題数">
               <button type="button" data-count="10">10</button>
@@ -134,10 +127,10 @@
               <button type="button" data-count="all">全問</button>
             </div>
             <div class="candidate-summary">
-              <span>候補問題</span>
+              <span>出題候補</span>
               <strong id="candidate-count">300問</strong>
             </div>
-            <button id="start-button" class="button primary full" type="button">クイズを開始</button>
+            <button id="start-button" class="button primary full" type="button">開始</button>
           </section>
         </aside>
       </div>
@@ -161,10 +154,10 @@
         <h1 id="quiz-question"></h1>
 
         <div class="confidence-block">
-          <span>回答前の確信度</span>
+          <span>確信度</span>
           <div id="confidence-buttons" class="confidence-buttons" role="group" aria-label="確信度">
             <button type="button" data-confidence="sure">自信あり</button>
-            <button type="button" data-confidence="unsure">迷い</button>
+            <button type="button" data-confidence="unsure">迷う</button>
             <button type="button" data-confidence="guess">勘</button>
           </div>
         </div>
@@ -173,7 +166,7 @@
 
         <div class="quiz-actions">
           <button id="skip-button" class="button ghost" type="button">後回し</button>
-          <span class="shortcut-note">1〜4：回答 / U：迷い / B：しおり / N：次へ</span>
+          <span class="shortcut-note">1〜4：回答 / U：迷う / B：しおり / N：次へ</span>
         </div>
 
         <section id="feedback-panel" class="feedback-panel hidden" aria-live="polite">
@@ -181,7 +174,7 @@
           <p id="feedback-summary"></p>
           <div id="choice-explanations" class="choice-explanations"></div>
           <details class="source-details">
-            <summary>参考資料を確認</summary>
+            <summary>参考資料</summary>
             <div id="question-sources" class="source-list"></div>
           </details>
           <div class="button-row feedback-buttons">
@@ -193,8 +186,7 @@
 
     <section id="view-result" class="view" aria-labelledby="result-title">
       <div class="result-hero">
-        <p class="eyebrow">SESSION COMPLETE</p>
-        <h1 id="result-title">学習結果</h1>
+        <h1 id="result-title">結果</h1>
         <div class="score-ring" aria-label="正答率">
           <strong id="result-percent">0%</strong>
           <span id="result-fraction">0 / 0</span>
@@ -212,7 +204,7 @@
           <div id="result-type-table" class="metric-list"></div>
         </section>
         <section class="panel">
-          <h2>確信度の校正</h2>
+          <h2>確信度別</h2>
           <div id="result-confidence-table" class="metric-list"></div>
         </section>
       </div>
@@ -220,17 +212,16 @@
       <div class="result-actions panel">
         <button id="retry-wrong-button" class="button primary" type="button">誤答を復習</button>
         <button id="retry-unsure-button" class="button secondary" type="button">迷い・勘を復習</button>
-        <button id="retry-same-button" class="button ghost" type="button">同じ条件で再挑戦</button>
-        <button id="back-setup-button" class="button ghost" type="button">学習設定へ</button>
+        <button id="retry-same-button" class="button ghost" type="button">同じ条件で再開</button>
+        <button id="back-setup-button" class="button ghost" type="button">出題設定へ</button>
       </div>
     </section>
 
     <section id="view-bank" class="view" aria-labelledby="bank-title">
       <div class="view-heading">
         <div>
-          <p class="eyebrow">QUESTION EXPLORER</p>
           <h1 id="bank-title">問題検索</h1>
-          <p>問題文、選択肢、解説、タグを横断検索できます。</p>
+          <p>問題文、選択肢、解説、タグから検索できます。</p>
         </div>
       </div>
 
@@ -251,7 +242,7 @@
           <span>形式</span>
           <select id="bank-type"><option value="all">すべて</option><option>単一選択</option><option>ケーススタディ</option><option>装置比較</option></select>
         </label>
-        <label class="switch-row inline"><input id="bank-bookmarked-only" type="checkbox"><span>しおりだけ</span></label>
+        <label class="switch-row inline"><input id="bank-bookmarked-only" type="checkbox"><span>しおりのみ</span></label>
       </div>
 
       <div class="bank-summary"><strong id="bank-result-count">0件</strong><span id="bank-page-info"></span></div>
@@ -265,27 +256,26 @@
     <section id="view-history" class="view" aria-labelledby="history-title">
       <div class="view-heading">
         <div>
-          <p class="eyebrow">LEARNING ANALYTICS</p>
           <h1 id="history-title">学習履歴</h1>
-          <p>このブラウザ内に保存した履歴を集計します。</p>
+          <p>回答履歴はこのブラウザに保存されます。</p>
         </div>
         <div class="button-row">
-          <button id="export-history" class="button secondary" type="button">JSONを書き出す</button>
-          <label class="button ghost file-button">JSONを読み込む<input id="import-history" type="file" accept="application/json"></label>
+          <button id="export-history" class="button secondary" type="button">履歴を書き出す（JSON）</button>
+          <label class="button ghost file-button">履歴を読み込む（JSON）<input id="import-history" type="file" accept="application/json"></label>
           <button id="reset-history" class="button danger" type="button">履歴を初期化</button>
         </div>
       </div>
 
       <div class="history-stats">
-        <div class="stat-card"><span>累計回答</span><strong id="history-attempts">0</strong></div>
-        <div class="stat-card"><span>累計正答率</span><strong id="history-accuracy">0%</strong></div>
-        <div class="stat-card"><span>学習済み</span><strong id="history-covered">0 / 300</strong></div>
+        <div class="stat-card"><span>回答数</span><strong id="history-attempts">0</strong></div>
+        <div class="stat-card"><span>正答率</span><strong id="history-accuracy">0%</strong></div>
+        <div class="stat-card"><span>回答済み</span><strong id="history-covered">0 / 300</strong></div>
         <div class="stat-card"><span>しおり</span><strong id="history-bookmarks">0</strong></div>
       </div>
 
       <div class="history-grid">
         <section class="panel">
-          <h2>カテゴリ別習熟度</h2>
+          <h2>カテゴリ別結果</h2>
           <div id="history-category-list" class="metric-list"></div>
         </section>
         <section class="panel">
@@ -293,7 +283,7 @@
           <div id="weak-question-list" class="weak-list"></div>
         </section>
         <section class="panel full-span">
-          <h2>最近のセッション</h2>
+          <h2>最近の学習</h2>
           <div id="recent-sessions" class="session-list"></div>
         </section>
       </div>
